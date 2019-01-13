@@ -1,1 +1,10 @@
-/home/neph94/.config/polybar/modules/weather/config.toml
+# Register at https://openweathermap.org to get your API key
+api_key = "587278621b3a35228693bb383e944f25"
+
+# This is for Montreal, find your city at https://openweathermap.org
+# The id will be the last part of the URL
+city_id = "456172"
+
+# Display settings
+units = "metric"
+display_symbol = "°C"
