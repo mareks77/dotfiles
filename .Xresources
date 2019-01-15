@@ -6,44 +6,35 @@
 ! Last Modified: 6 Sep 2014
 ! -----------------------------------------------------------------------------
 
-
-*.background: [80]#282828
-! soft contrast: *background: #32302f
-*.foreground: #ebdbb2
+*background: [80]#282828
+!soft contrast: *background: #32302f
+*foreground: #ebdbb2
 ! Black + DarkGrey
-*.color0:  #282828
-*.color8:  #928374
+*color0:  #282828
+*color8:  #928374
 ! DarkRed + Red
-*.color1:  #cc241d
-*.color9:  #fb4934
+*color1:  #cc241d
+*color9:  #fb4934
 ! DarkGreen + Green
-*.color2:  #98971a
-*.color10: #b8bb26
+*color2:  #98971a
+*color10: #b8bb26
 ! DarkYellow + Yellow
-*.color3:  #d79921
-*.color11: #fabd2f
+*color3:  #d79921
+*color11: #fabd2f
 ! DarkBlue + Blue
-*.color4:  #458588
-*.color12: #83a598
+*color4:  #458588
+*color12: #83a598
 ! DarkMagenta + Magenta
-*.color5:  #b16286
-*.color13: #d3869b
+*color5:  #b16286
+*color13: #d3869b
 ! DarkCyan + Cyan
-*.color6:  #689d6a
-*.color14: #8ec07c
+*color6:  #689d6a
+*color14: #8ec07c
 ! LightGrey + White
-*.color7:  #a89984
-*.color15: #ebdbb2
+*color7:  #a89984
+*color15: #ebdbb2
 
 rofi.font: Inconsolata 12
-
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight 
-Xft.lcdfilter: lcddefault
 
 URxvt.scrollBar: false
 URxvt.depth:                      32
@@ -51,6 +42,7 @@ URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*saveLines: 5000
+URxvt*termName:  rxvt-unicode-256color
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
 URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
@@ -65,5 +57,7 @@ URxvt.keysym.Shift-Control-Up:    \033[1;6A
 URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down: \033[1;6B
 URxvt.font: xft:DejaVu Sans Mono:style=Book:size=10
-URxvt.letterSpace: 0
-URxvt.url-select.underline: true
+URxvt.letterSpace: -1
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
