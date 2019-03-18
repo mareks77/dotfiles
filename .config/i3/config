@@ -13,7 +13,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Source code Pro 8, FontAwesome Regular
+font pango:SF Pro Text 8, FontAwesome Regular
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -238,4 +238,5 @@ exec xrandr --output DVI-D-0 --mode 1920x1080 --rate 144 --right-of DVI-I-1 --pr
 exec --no-startup-id dunst
 exec xset m 0 0
 exec --no-startup-id pamac-tray
+exec setxkbmap -option grp:ctrls_toggle lv,ru
 exec --no-startup-id nm-applet

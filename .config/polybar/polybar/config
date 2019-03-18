@@ -9,7 +9,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #60222222
+background = #000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -40,7 +40,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Inconsolata:style=Regular:weight=600:pixelsize=13;1
+font-0 = SF Mono:style=Regular:pixelsize=12;1
 font-1 = Material Icons:style=Regular:pixelsize=13;2
 
 modules-left = bspwm i3
@@ -48,7 +48,7 @@ modules-center = date
 
 tray-position = right
 tray-padding = 2
-tray-background = #333
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -86,7 +86,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 
-font-0 = Inconsolata:type=Regular:weight=600:pixelsize=13;1
+font-0 = SF Mono:type=Regular:pixelsize=12;1
 font-1 = Font Awesome 5 Brands:style=Regular:pixelsize=12;1
 font-2 = Material Icons:style=Regular:pixelsize=13;2
 font-3 = Weather Icons:style=Regular:weight=900:pixelsize=11;2
@@ -291,13 +291,13 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %a %b,%d"
+date = " %A %b,%d"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = ""
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
 
