@@ -229,7 +229,7 @@ mode "$mode_gaps_outer" {
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id discord --start-minimized
-exec --no-startup-id compton --config ~/.config/compton.conf
+#exec --no-startup-id compton --config ~/.config/compton.conf
 exec --no-startup-id qbittorrent
 exec --no-startup-id redshift
 exec --no-startup-id nitrogen --restore
