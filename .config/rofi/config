@@ -1,0 +1,2 @@
+rofi.modi: drun,calc
+rofi.theme: /usr/share/rofi/themes/gruvbox-dark-soft.rasi
