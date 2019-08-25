@@ -1,0 +1,11 @@
+gtk-can-change-accels = 1
+
+gtk-icon-theme-name = "Flat-Remix-Blue-Dark"
+gtk-theme-name = "Arc-Dark" 
+
+style "user-font"
+{
+        font_name="SF Pro Text 12"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "SF Pro Text 12"
