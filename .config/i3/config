@@ -240,3 +240,4 @@ exec xset m 0 0
 exec --no-startup-id pamac-tray
 exec setxkbmap -option grp:ctrls_toggle lv,ru
 exec --no-startup-id nm-applet
+exec --no-startup-id udiskie --tray
