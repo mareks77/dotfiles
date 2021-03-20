@@ -158,6 +158,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Fullscreen to container
+bindsym $mod+y focus parent; fullscreen; focus child
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
@@ -192,6 +194,7 @@ smart_gaps on
 smart_borders on
 for_window [class="^.*"] border pixel 2 
 for_window [title="Authy"] floating enable
+for_window [instance="origin.exe"] floating enable
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -228,16 +231,15 @@ mode "$mode_gaps_outer" {
 # Startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id discord --start-minimized
-#exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id discord 
 exec --no-startup-id qbittorrent
 exec --no-startup-id redshift
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop -startintray 
-exec xrandr --output DVI-D-0 --mode 1920x1080 --rate 144 --right-of DVI-I-1 --primary
+exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 144 --right-of DP-0 --primary
 exec --no-startup-id dunst
-exec xset m 0 0
-exec --no-startup-id pamac-tray
-exec setxkbmap -option grp:ctrls_toggle lv,ru
+exec --no-startup-id xset m 0 0
+exec --no-startup-id setxkbmap -option grp:ctrls_toggle lv,ru
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie --tray
+exec --no-startup-id xfce4-clipman

@@ -2,9 +2,26 @@
 
 import requests
 
+
+from requests import Request, Session
+from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
+import json
+
+currency='USD'
 icon = ""
-ticker = "bitcoin"
-currency = "USD"
-json = requests.get(f'https://api.coinmarketcap.com/v1/ticker/{ticker}').json()[0]
-price = int(round(float(json[f'price_{currency.lower()}'])))
-print(f'{icon} {price} {currency}')
+url = 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD'
+headers = {
+  'Accepts': 'application/json',
+  'Apikey': '5b0fc806257a77e2b39d28765f5a72d030e2e470ec3250cf5723f9306e889968',
+}
+
+session = Session()
+session.headers.update(headers)
+
+try:
+  response = session.get(url)
+  data = json.loads(response.text)
+  price = int(data[currency])
+  print(f'{icon} {price} {currency}')
+except (ConnectionError, Timeout, TooManyRedirects) as e:
+  print('Error')

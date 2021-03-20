@@ -20,7 +20,7 @@ alert = #bd2c40
 black = #333
 
 [bar/left]
-monitor = DVI-I-1
+monitor = DP-0
 width = 100%
 height = 27
 fixed-center = true
@@ -69,7 +69,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/right]
-monitor = DVI-D-0
+monitor = DP-2 
 width = 100%
 height = 27
 fixed-center = true
@@ -99,10 +99,10 @@ modules-left = bspwm i3
 modules-center = date
 modules-right = crypto_module filesystem memory cpu wlan eth battery temperature weather
 
-;tray-position = right
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+#tray-position = right
+#tray-padding = 2
+#tray-transparent = true
+#tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -368,7 +368,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = 
+format-underline =
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -435,8 +435,13 @@ click-right = cmus-remote --stop
 
 [module/crypto_module]
 type = custom/script
-exec = ~/.config/polybar/modules/crypto_module.sh
+exec = python3 ~/.config/polybar/modules/crypto_module.py
 interval = 60 
+
+[module/fear_greed]
+type = custom/script
+exec = python3 ~/.config/polybar/modules/fear_greed.py
+interval = 60
 
 [module/weather]
 type = custom/script
