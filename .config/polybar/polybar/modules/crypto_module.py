@@ -18,10 +18,8 @@ headers = {
 session = Session()
 session.headers.update(headers)
 
-try:
-  response = session.get(url)
-  data = json.loads(response.text)
-  price = int(data[currency])
-  print(f'{icon} {price} {currency}')
-except (ConnectionError, Timeout, TooManyRedirects) as e:
-  print('Error')
+response = session.get(url)
+data = json.loads(response.text)
+price = int(data[currency])
+
+print(f'{icon} {price} {currency}')

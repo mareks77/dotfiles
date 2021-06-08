@@ -48,7 +48,7 @@ font-3 = Weather Icons:style=Regular:weight=900:pixelsize=11;2
 
 modules-left = bspwm i3
 modules-center = date
-modules-right = crypto_module
+;modules-right = crypto_module
 
 tray-position = right
 tray-padding = 2

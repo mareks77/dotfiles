@@ -230,9 +230,9 @@ mode "$mode_gaps_outer" {
 
 # Startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec --no-startup-id discord 
-exec --no-startup-id qbittorrent
+#exec --no-startup-id qbittorrent
 exec --no-startup-id redshift
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop -startintray 
