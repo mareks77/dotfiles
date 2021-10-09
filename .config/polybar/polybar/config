@@ -97,7 +97,7 @@ font-3 = Weather Icons:style=Regular:weight=900:pixelsize=11;2
 
 modules-left = bspwm i3
 modules-center = date
-modules-right = crypto_module filesystem memory cpu wlan eth battery temperature weather
+modules-right = crypto_module memory cpu weather
 
 #tray-position = right
 #tray-padding = 2
